@@ -22,6 +22,7 @@ def login(request):
     return render(request, 'login.html')
 
 def finishregistration(request):
+
     cursor = cnx.cursor()
     username = (request.POST['username'])
     password = (request.POST['password'])
@@ -45,6 +46,7 @@ def finishregistration(request):
         length = True
         ok = 'username'
     if ok == 'good':
+        request.session['user'] = username
         cursor.execute(f'''INSERT INTO players (username, password, money, level, hpLevel, shotgunLevel, pistolLevel, machineGunLevel, sniperLevel, rpgLevel, flamethrowerLevel, knivesLevel, grenadeLevel, shotgunAmmo, machineGunAmmo, sniperAmmo, rpgAmmo, flamethrowerAmmo, knivesAmmo, grenadeAmmo)
 VALUES ('{username}', '{password}', 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);''')
         cnx.commit()
