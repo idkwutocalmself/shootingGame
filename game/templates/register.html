@@ -9,9 +9,14 @@
 <body style="text-align: center;" class="text">
 	<h1>Registration</h1>
 	<form action="../finishregistration/" method="post">
-		<label for="username" style = "color: {% if length %} red {% else %} black {% endif %};">Username (3-16 chars): </label><input type="text" name="username"><br>
-		<label for="password" style="color: {% if pw %} red {% else %} black {% endif %};">Password (5-255 chars): </label><input type="password" name="password"><br>
+		<div style="padding: 2px 2px 2px 2px">
+		<label for="username" style = "color: {% if length %} red {% else %} black {% endif %};">Username (3-16 chars): </label><input type="text" name="username"></div>
+		<div style="padding: 2px 2px 2px 2px">
+		<label for="password" style="color: {% if pw %} red {% else %} black {% endif %};">Password (5-255 chars): </label><input type="password" name="password">
+	</div>
+	<div style="padding: 2px 2px 2px 2px">
 		<input type="submit" value="Submit">
+	</div>
 	</form><br>
 	<h3 style = 'display: {% if name %} block {%else%} none {%endif%}; color:red;'>That username has already been taken!</h3>
 	<p><br>Already have an account? <a href='../login/'>Login</a> instead.</p>

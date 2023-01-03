@@ -6,7 +6,16 @@
 	<title>Login</title>
 	<link rel="stylesheet" href='../../static/style.css'>
 </head>
-<body style='align:center;' class='text'>
-	
+<body style='text-align:center;' class='text'>
+	<h1>Login</h1>
+	<form action="../finishlogin/" method="post">
+		<div style="padding: 2px 2px 2px 2px"><label for="username">Username: </label><input type="text" name="username"></div>
+		<div style="padding: 2px 2px 2px 2px">
+		<label for="password">Password: </label><input type="password" name="password"></div>
+		<div style="padding: 2px 2px 2px 2px">
+		<input type="submit" value="Submit"></div>
+	</form>
+	<br>
+	<h3 style='color: red;{%if not wrong%} display: none;{%else%}{%endif%}'>Wrong username or password!</h3>
 </body>
 </html>

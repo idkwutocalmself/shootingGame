@@ -6,5 +6,8 @@ urlpatterns = [
     path('multiplayer/', views.multiplayer),
     path('register/', views.register),
     path('login/', views.login),
-    path('finishregistration/', views.finishregistration)
+    path('finishregistration/', views.finishregistration),
+    path('failsession/', views.failsession),
+    path('logout/', views.logout),
+    path('finishlogin/', views.finishlogin),
 ]
