@@ -3,7 +3,7 @@ import mysql.connector
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 # Create your views here.
-cnx = mysql.connector.connect(user='root', password='165924545',
+cnx = mysql.connector.connect(user='root', password='your password here',
                               host='127.0.0.1',
                               database='game')
 def main_page(request):
