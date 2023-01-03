@@ -6,7 +6,8 @@ from django.http import HttpResponse
 
 # The following 3 lines of code are redundant.
 # Just put your password in the password section instead of the passw variable.
-# I'm just doing this so that I don't reveal my password to the world.
+# I'm just doing this so that I do not reveal my password to the world.
+
 file = open('../../Documents/password.txt', 'r')
 passw = file.readline()[:-1]
 file.close()
