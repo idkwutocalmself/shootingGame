@@ -3,7 +3,14 @@ import mysql.connector
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 # Create your views here.
-cnx = mysql.connector.connect(user='root', password='165924545',
+
+# The following 3 lines of code are redundant.
+# Just put your password in the password section instead of the passw variable.
+# I'm just doing this so that I don't reveal my password to the world.
+file = open('../../Documents/password.txt', 'r')
+passw = file.readline()[:-1]
+file.close()
+cnx = mysql.connector.connect(user='root', password=passw,
                               host='127.0.0.1',
                               database='game')
 def main_page(request):
