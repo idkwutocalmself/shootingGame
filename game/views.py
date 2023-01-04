@@ -59,7 +59,7 @@ def finishregistration(request):
         pw = True
         ok = 'pw'
     length = False
-    if 3 > len(username) or len(username) > 16:
+    if 3 > len(username) or len(username) > 15:
         length = True
         ok = 'username'
     if ok == 'good':
@@ -103,3 +103,6 @@ def finishlogin(request):
         return render(request, 'login.html', {'wrong': True})
     else:
         return render(request, "finishregistration.html")
+
+def profile(request):
+    pass
