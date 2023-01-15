@@ -40,4 +40,5 @@ CREATE TABLE multiplayer21 (
 	playerY float,
 	ammo int
 );
+
 3. run the server
