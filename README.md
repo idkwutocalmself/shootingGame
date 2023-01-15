@@ -1,6 +1,7 @@
 # shootingGame
 1. Setup django and mysql
 2. Run this sql code:
+
 CREATE DATABASE game;
 
 USE game;
